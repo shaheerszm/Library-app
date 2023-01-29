@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <script src="app.js" defer> </script>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <header class="header"> 
+      <div class="container">
+        <h1>library</h1>
+      </div>
+    </header>
+    <main class="main">  
+      <button class="btn-add" id="btn-add">+ Add book</button>
+      <div class="books-grid" id="booksGrid"></div>
+      <div id="add-book-modal">
+        <div id="add-book-modal-content">
+          <h2>Add a book to your library</h2>
+          <form id="form-add-book" action="" method="get"> 
+            <div class="txt-input">
+              <label for="title">Title</label>
+              <input class="validate" id="title" type="text" name="title" required size="50">
+            </div>
+            <div class="txt-input">
+              <label for="author">Author</label>
+              <input class="validate" id="author" type="text" name="author" required size="15">
+            </div>
+            <div class="txt-input">
+              <label for="pages">How many pages does the book have?</label>
+              <input class="validate" id="pages" type="number" name="pages" required>
+            </div>
+            <div>
+              <input class="validate" id="readYet" type="checkbox" name="readYet">
+              <label id="readLabel" for="readYet">Did you finish reading it?</label>
+            </div>
+          </form>
+          <button id="submit-add-book" type="submit" form="form-add-book">Submit</button>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>© 2023 Shaheer Amjad</p>
+    </footer>
+  </body>
+</html>

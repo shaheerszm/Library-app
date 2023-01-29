@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Library
+    script(src="app.js", defer) 
+    link(rel="stylesheet", href="./style.css")
+  body
+    header.header 
+      .container
+        h1 library
+    main.main   
+      button.btn-add#btn-add + Add book
+      #booksGrid.books-grid
+      #add-book-modal
+        #add-book-modal-content
+          h2 Add a book to your library
+          form#form-add-book(action="", method="get") 
+            div.txt-input
+              label(for="title") Title
+              input#title.validate(type="text", name="title", required, size="50")
+            div.txt-input
+              label(for="author") Author
+              input#author.validate(type="text", name="author", required, size="15")
+            div.txt-input
+              label(for="pages") How many pages does the book have?
+              input#pages.validate(type="number", name="pages", required)
+            div
+              input#readYet.validate(type="checkbox", name="readYet")
+              label#readLabel(for="readYet") Did you finish reading it?
+              
+          button#submit-add-book(type="submit", form="form-add-book") Submit
+    footer.footer
+      p © 2023 Shaheer Amjad
